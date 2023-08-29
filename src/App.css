@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+
+#search {
+    padding: 2rem;
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search input {
+    width: 40%;
+    padding: 0.8rem;
+    font-weight: bold;
+    border-radius: 10px;
+    caret-color: blue;
+    box-shadow: 0 0 2px 0 white;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    
+}
+
+img {
+    width: 40px;
+}
+
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    font-family: 'Poppins', sans-serif;
+}
+
+tr {
+    border-bottom: 1px solid white;
+}
+
+.head-tr {
+    border-bottom: 0px;
+}
+
+th,
+td {
+    padding: 25px 15px;
+    background-color: rgba(5, 5, 5, 0.2);
+    color: #fff;
+    font-family: 'Bree Serif', serif;
+}
+
+th {
+    text-align: left;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.coin-symbol {
+    font-family: 'Roboto', sans-serif;
+}
+
+thead {
+    th {
+        background-color: #55608f;
+    }
+}
+
+tbody {
+    tr {
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    }
+
+    td {
+        position: relative;
+
+        &:hover {
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: -9999px;
+                bottom: -9999px;
+                background-color: rgba(255, 255, 255, 0.2);
+                z-index: -1;
+            }
+        }
+    }
+}
+
+.error-container{
+    color: #fff;
+    font-size: 2rem;
+    text-shadow: 1px 0 5px red;
+}
+@media screen and (0 < width < 576px) {
+    table {
+        width: 95%;
+    }
+
+    th,
+    td {
+        padding: 15px 5px;
+    }
+    #search input {
+        width: 80%;
+    }
+}
